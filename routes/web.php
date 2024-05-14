@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\PublicController;
+Route::get('/', [PublicController::class, 'toppage'])->name('toppage');
+Route::get('/games', [PublicController::class, 'gamesView'])->name('games.gamesView');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
