@@ -3,58 +3,45 @@
 
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
-@section('title', 'トップページ')
+@section('title', '新規作成')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
-    <ul>
-        <li><a href="#">ゲームソフト</a></li>
-        <li><a href="#">投稿一覧</a></li>
-        <li><a href="#">キャラクター</a></li>
-    </ul>
-    
-    <h1>最新投稿</h1>
-    
-    <div class="main">
-        <div class="container">
-            <div class="left-contents">
-                <div class="card-contents">
-                    <h3 class="text-title"></h3>
-                </div>    
-            </div>
-            <div class="right-contents">
-                <div class="card-contents">
-                    <h4 class="text-title"></h4>
-                </div>
-            </div>
-        </div>    
-    </div>
-    
-    <ul>
-        <li><a href="#">投稿ページへ</a></li>
-    </ul>
-    
-    <h5>Games</h5>
-    
-    <div class="main">
-        <div class="container">
-            <div class="main-contents">
-                <div><img src="" class="game-image"></div>
-                <p class="game-name">スーパーマリオ64</p>    
-            </div>
-            <div class="right-contents">
-                <div><img src="" class="game-image"></div>
-                <p class="game-name">スーパーマリオ64</p>    
-            </div>
-            <div class="left-contents">
-                <div><img src="" class="game-image"></div>
-                <p class="game-name">スーパーマリオ64</p>    
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>新規作成</h2>
+                <form action="{{ route('admin.news.create') }}" method="post" enctype="multipart/form-data">
+
+                    @if (count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    <div class="form-group row">
+                        <label class="col-md-2">タイトル</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">本文</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">画像</label>
+                        <div class="col-md-10">
+                            <input type="file" class="form-control-file" name="image">
+                        </div>
+                    </div>
+                    @csrf
+                    <input type="submit" class="btn btn-primary" value="更新">
+                </form>
             </div>
         </div>
-    </div>
-    
-    <p><a href="#">もっと見る</a></p>
-    
-    <div class="Mario-image"><img src="" alt="マリオの画像"></div>
-    
-    @endsection
+    </div>    
+@endsection

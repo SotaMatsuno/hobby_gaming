@@ -15,4 +15,9 @@ class PublicController extends Controller
     {
         return view('games');
     }
+    
+    public function gamesposts()
+    {
+        return view('posts');
+    }
 }
