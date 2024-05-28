@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PublicController extends Controller
+class GamesController extends Controller
 {
     public function add()
     {
@@ -15,5 +16,10 @@ class PublicController extends Controller
     {
         // admin/gamingposts/createにリダイレクトする
         return redirect('admin/gamingposts/create');
+    }
+    
+    public function settingAdd()
+    {
+        return view('admin.gamingposts.settings');
     }
 }

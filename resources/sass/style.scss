@@ -1,0 +1,44 @@
+@charset "UTF-8";
+//  その他前準備読み込み
+//  ------------------------------------------
+@import "base";
+
+
+//  レイアウト他パーツ
+//  ------------------------------------------
+@import "header";
+@import "footer";
+@import "toppage";
+
+#bg_test{
+    background-image:url('/img/bg-01.png');
+}
+
+.gameList{
+    .gameCont{
+        width:40%;
+        display:block;
+        border:1px solid #000;
+        margin-bottom:30px;
+        padding:10px;
+        border-radius:30px;
+        background:#fff;
+        .gameContImg{
+            width:40%;
+        }
+        .gameContText{
+            width:50%;
+        }
+    }
+}
+
+//設定ページ用のsass
+.settingMenu{
+    width:800px;
+    margin:0 auto;
+    li{
+        border:1px solid #000;
+        padding:20px;
+        text-align:center;
+    }
+}

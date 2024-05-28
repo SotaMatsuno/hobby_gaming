@@ -1,0 +1,145 @@
+.text_green {
+  color: #00A19A;
+}
+.text_green a {
+  color: #00A19A;
+}
+
+.text_blue {
+  color: #0072D3;
+}
+.text_blue a {
+  color: #0072D3;
+}
+
+.text_red {
+  color: #E60012;
+}
+.text_red a {
+  color: #E60012;
+}
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address, img, dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, menu, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+ul ul {
+  margin: 0;
+}
+
+table {
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, nav, section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #E60012;
+}
+
+a:hover > img {
+  opacity: 0.7;
+}
+
+img {
+  width: 100%;
+  max-width: none;
+}
+
+video {
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.mobile-none {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .mobile-none {
+    display: block;
+  }
+}
+
+#bg_test {
+  background-image: url("/img/bg-01.png");
+}
+
+.gameList .gameCont {
+  width: 40%;
+  display: block;
+  border: 1px solid #000;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  background: #fff;
+}
+.gameList .gameCont .gameContImg {
+  width: 40%;
+}
+.gameList .gameCont .gameContText {
+  width: 50%;
+}
+
+.settingMenu {
+  width: 800px;
+  margin: 0 auto;
+}
+.settingMenu li {
+  border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+}

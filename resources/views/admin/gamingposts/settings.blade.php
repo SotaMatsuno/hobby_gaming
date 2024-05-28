@@ -7,8 +7,11 @@
 {{-- front.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 <div>
-    <ul>
-        <li><h1>アカウント</h1></li>
+    <ul class="settingMenu">
+        <li>
+            <div><img src="{{ secure_asset('img/mario64.jpg') }}" alt="スーパーマリオ64"></div>
+            <p>アカウント</p>
+        </li>
         <li><a href="#">ログアウト</a></li>
         <li><a href="#">メールアドレス変更</a></li>
         <li><a href="#">パスワード変更</a></li>
