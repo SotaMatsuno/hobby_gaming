@@ -114,6 +114,28 @@ h3 {
   }
 }
 
+.headerNav .homeBtn {
+  padding: 10px 20px;
+  width: 140px;
+  text-align: center;
+  display: block;
+  background: #ddd;
+}
+.headerNav .headerNav-right a {
+  display: block;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.bg-01 {
+  background-image: url("/img/bg-01.png");
+}
+
+.bg-02 {
+  background-image: url("/img/bg-02.png");
+}
+
 #bg_test {
   background-image: url("/img/bg-01.png");
 }

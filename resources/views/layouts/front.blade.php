@@ -28,9 +28,9 @@
     </head>
     <body>
         <header>
-            <nav>
-                <p><a href="#">home</a></p>
-                <ul>
+            <nav class="headerNav d-flex justify-content-between">
+                <p><a href="/" class="homeBtn">Home</a></p>
+                <ul class="headerNav-right d-flex">
                     <li><a href="#">ログイン</a></li>
                     <li><a href="#">新規登録</a></li>
                 </ul>
@@ -47,7 +47,6 @@
             <ul>
                 <li><a href="#">ゲームソフト</a></li>
                 <li><a href="#">投稿一覧</a></li>
-                <li><a href="#">キャラクター</a></li>
             </ul>
             <div><img src="" alt="上へ戻るボタン"></div>
         </footer>
