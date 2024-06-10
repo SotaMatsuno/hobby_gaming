@@ -1,0 +1,29 @@
+.mario-nav{
+    margin:0 auto;
+    li{
+        .mario-nav-games{
+            display:block;
+            width:150px;
+            background:#FAD528;
+            border:1px solid #000;
+            margin-bottom:30px;
+            padding:10px;
+            border-radius:5px;
+            text-align:center;
+        }
+        .mario-nav-posts{
+            display:block;
+            width:150px;
+            background:#FAD528;
+            border:1px solid #000;
+            margin-bottom:30px;
+            padding:10px;
+            border-radius:5px;
+            text-align:center;
+        }
+    }
+}
+
+.up-btn{
+    display:block;
+}

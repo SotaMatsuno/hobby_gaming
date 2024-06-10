@@ -44,11 +44,13 @@
             @yield('content')
         </main>
         <footer>
-            <ul>
-                <li><a href="#">ゲームソフト</a></li>
-                <li><a href="#">投稿一覧</a></li>
-            </ul>
-            <div><img src="" alt="上へ戻るボタン"></div>
+            <div class="d-flex">
+                <ul class="mario-nav d-flex">
+                    <li><a href="#" class="mario-nav-games">ゲームソフト</a></li>
+                    <li><a href="#" class="mario-nav-posts">投稿一覧</a></li>
+                </ul>
+                <div class="up-btn"><img src="" alt="上へ戻るボタン"></div>
+            </div>
         </footer>
     </body>
 </html>
