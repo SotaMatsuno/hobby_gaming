@@ -15,6 +15,16 @@
         <!-- Scripts -->
          {{-- Laravel標準で用意されているJavascriptを読み込みます --}}
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        <script>
+          (function(d) {
+            var config = {
+              kitId: 'tlt2bja',
+              scriptTimeout: 3000,
+              async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          })(document);
+        </script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -33,6 +43,24 @@
                 <ul class="headerNav-right d-flex">
                     <li><a href="#">ログイン</a></li>
                     <li><a href="#">新規登録</a></li>
+                    <li class="hamburger">
+                        <!-- ハンバーガーメニュー部分 -->
+                        <div class="nav">
+                            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+                            <!-- ハンバーガーアイコン -->
+                            <label for="drawer_input" class="drawer_open"><span></span></label>
+                            <!-- メニュー -->
+                            <nav class="nav_content">
+                                <ul class="nav_list">
+                                    <li class="nav_item"><a href="">トップページ</a></li>
+                                    <li class="nav_item"><a href="">ゲーム一覧</a></li>
+                                    <li class="nav_item"><a href="">投稿一覧</a></li>
+                                    <li class="nav_item"><a href="">アカウント設定</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="mainimage">
@@ -49,7 +77,7 @@
                     <li><a href="#" class="mario-nav-games">ゲームソフト</a></li>
                     <li><a href="#" class="mario-nav-posts">投稿一覧</a></li>
                 </ul>
-                <div class="up-btn"><img src="" alt="上へ戻るボタン"></div>
+                <div><a href="#" class="up-btn"><img src="{{ secure_asset('img/up-btn.jpg') }}" alt="上へ戻るボタン"></a></div>
             </div>
         </footer>
     </body>

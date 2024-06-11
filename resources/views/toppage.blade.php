@@ -21,18 +21,9 @@
     <div class="bg-02">
         <h2 class="letter">Games</h2>
         <div class="gamebox d-flex">
-            <div class="mariogame">
-                <img src="{{ secure_asset('img/mario64.jpg') }}">
-                <p class="game-name">スーパーマリオ64</p>
-            </div>
-            <div class="mariogame">
-                <img src="{{ secure_asset('img/mariogalaxy.jpg') }}">
-                <p class="game-name">スーパーマリオギャラクシー</p>
-            </div>
-            <div class="mariogame">
-                <img src="{{ secure_asset('img/marioodyssey.jpg') }}">
-                <p class="game-name">マリオオデッセイ</p>
-            </div>
+            <a href="#" class="mariogame"><div><img src="{{ secure_asset('img/mario64.jpg') }}"></div></a>
+            <a href="#" class="mariogame"><div><img src="{{ secure_asset('img/mariogalaxy.jpg') }}"></div></a>
+            <a href="#" class="mariogame"><div><img src="{{ secure_asset('img/marioodyssey.jpg') }}"></div></a>
         </div>
         <p class="mario-nav-gameList"><a href="#">もっと見る</a></p>
     </div>

@@ -1,9 +1,11 @@
 .bg-01{
     background-image:url('/img/bg-01.png');
+    padding-bottom:30px;
 }
 
 .bg-02{
     background-image:url('/img/bg-02.png');
+    padding-bottom:30px;
 }
 
 .letter{
@@ -19,20 +21,26 @@
     border-radius:5px;
     text-align:center;
     margin:0 auto;
-    margin-bottom:30px;
 }
 
 .gamebox{
+    margin-bottom:30px;
     .mariogame{
         background:#fff;
-        width:100%;
+        width:34%;
         display:block;
-        padding:5px;
-        margin-bottom:30px;
-        border-radius:10px;
-        
-        .game-name{
-            text-align:center;
+        div{
+            overflow:hidden;//はみ出した部分を隠す
+            position:relative;//位置指定の基準
+            padding-top:87%;
+            img{
+                position:absolute;
+                top:0;
+                left:0;
+                &:hover{
+                    opacity:0.8;
+                }
+            }
         }
     }
 }
@@ -41,7 +49,6 @@
     display:block;
     width:150px;
     background:#FAD528;
-    margin-bottom:30px;
     padding:10px;
     border-radius:5px;
     border:1px solid #000;
