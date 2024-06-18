@@ -225,6 +225,41 @@ h3 {
   bottom: 0; /* メニューを画面に入れる */
 }
 
+.logout-box {
+  display: none;
+  border: 1px solid #000;
+  width: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 150px;
+  background: #fff;
+}
+.logout-box.active {
+  display: block;
+}
+.logout-box h4 {
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.logout-box p {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.logout-box a {
+  display: block;
+  padding: 5px;
+  margin-left: 20px;
+  width: 100px;
+  background: #aaa;
+  text-align: center;
+}
+
 .mario-nav {
   margin: 0 auto;
 }

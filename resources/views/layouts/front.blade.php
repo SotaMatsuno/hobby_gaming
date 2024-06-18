@@ -41,8 +41,28 @@
             <nav class="headerNav d-flex justify-content-between">
                 <p><a href="/" class="homeBtn">Home</a></p>
                 <ul class="headerNav-right d-flex">
-                    <li><a href="#">ログイン</a></li>
-                    <li><a href="#">新規登録</a></li>
+                    {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                    @guest
+                        <li><a href="{{ route('login') }}">ログイン</a></li>
+                        <li><a id="logout" href="#">新規登録</a></li>
+                    {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('messages.logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
                     <li class="hamburger">
                         <!-- ハンバーガーメニュー部分 -->
                         <div class="nav">
@@ -62,6 +82,11 @@
                         </div>
                     </li>
                 </ul>
+                <div class="logout-box">
+                    <h4>ログアウト</h4>
+                    <p>ログアウトしますか?</p>
+                    <a class="dropdown-item" href="{{ route('logout') }}">ログアウト</a>
+                </div>
             </nav>
             <div class="mainimage">
                 @yield('mainimage')

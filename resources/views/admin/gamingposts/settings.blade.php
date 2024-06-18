@@ -12,7 +12,7 @@
             <div><img src="{{ secure_asset('img/mario64.jpg') }}" alt="スーパーマリオ64"></div>
             <p>アカウント</p>
         </li>
-        <li><a href="#">ログアウト</a></li>
+        <li><a href="#" id="">ログアウト</a></li>
         <li><a href="#">メールアドレス変更</a></li>
         <li><a href="#">パスワード変更</a></li>
         <li><a href="#">アカウント削除</a></li>
