@@ -33,34 +33,38 @@
 }
 
 //設定ページ用のsass
+.bg-02-settings{
+    background-image:url('/img/bg-02.png');
+    padding-bottom:30px;
+    padding:50px;
+}
+
 .settingMenu{
     width:800px;
     margin:0 auto;
     background:#fff;
+    
     li{
         border:1px solid #000;
         padding:20px;
         text-align:center;
+        #lb{
+            width:200px;
+            margin:0 auto;
+            cursor:pointer;
+        }
+
         .popup{
-            position:absolute;
-            top:-150%;
-            left:50%;
-            opacity:0;
-            transform:translate(-50%,-50%) scale(1.25);
-            width:380px;
-            padding:20px 30px;
-            background:#fff;
-            transiton:top 0ms ease-in-out 200ms,
-                      opacity 200ms ease-in-out 0ms,
-                      transform 20ms ease-in-out 0ms,
+            display:none;
+            width:500px;
+            background:#000;
+            margin:auto;
+            &.active{
+                display:block;
+            }
         }
-        .popup.active{
-            top:50%;
-            opacity:1;
-            transform:translate(-50%,-50%) scale(1.25);
-            transiton:top 0ms ease-in-out 0ms,
-                      opacity 200ms ease-in-out 0ms,
-                      transform 20ms ease-in-out 0ms,
-        }
+        
     }
 }
+
+

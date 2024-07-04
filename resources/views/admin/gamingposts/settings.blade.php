@@ -6,25 +6,56 @@
 
 {{-- front.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
-<div class="bg-02">
+<div class="bg-02-settings">
     <ul class="settingMenu">
         <li>
-            <div><img src="{{ secure_asset('img/mario64.jpg') }}" alt="スーパーマリオ64"></div>
+            <div><img src="{{ secure_asset('') }}" alt="画像"></div>
             <p>アカウント</p>
         </li>
         <li>
-            <button id="show-logout">ログアウト</button>
+            <div id="lb">ログアウト</div>
             <div class="popup">
                 <p>ログアウト</p>
+                <button type="button" class="btn-close"></button>
                 <div>
                     <p>ログアウトしますか？</p>
                     <button>ログアウト</button>
                 </div>
             </div>
         </li>
-        <li><a href="#">メールアドレス変更</a></li>
-        <li><a href="#">パスワード変更</a></li>
-        <li><a href="#">アカウント削除</a></li>
+        <li>
+            <a href="#">メールアドレス変更</a>
+            <div>
+                <p>メールアドレス変更</p>
+                <button type="button" class="btn-close"></button>
+                <form></form>
+                <button>変更</button>    
+            </div>
+        </li>
+        <li>
+            <a href="#">パスワード変更</a>
+            <div>
+                <p>パスワード変更</p>
+                <button type="button" class="btn-close"></button>
+                <p>現在のパスワード</p>
+                <form></form>
+                <p>新しいパスワード</p>
+                <form></form>
+                <p>新しいパスワード（再入力）</p>
+                <form></form>
+            </div>
+        </li>
+        <li>
+            <a href="#">アカウント削除</a>
+            <div>
+                <p>アカウント削除</p>
+                <button type="button" class="btn-close"></button>
+                <p>※データ復旧は不可となります</p>
+                <p>現在のパスワード</p>
+                <form></form>
+                <p>データ復旧は不可と合意する</p>
+            </div>
+        </li>
     </ul>
 </div>
 @endsection

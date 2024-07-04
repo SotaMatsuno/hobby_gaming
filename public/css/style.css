@@ -373,6 +373,12 @@ h3 {
   width: 50%;
 }
 
+.bg-02-settings {
+  background-image: url("/img/bg-02.png");
+  padding-bottom: 30px;
+  padding: 50px;
+}
+
 .settingMenu {
   width: 800px;
   margin: 0 auto;
@@ -383,20 +389,17 @@ h3 {
   padding: 20px;
   text-align: center;
 }
+.settingMenu li #lb {
+  width: 200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
 .settingMenu li .popup {
-  position: absolute;
-  top: -150%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(1.25);
-  width: 380px;
-  padding: 20px 30px;
-  background: #fff;
-  transiton: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+  display: none;
+  width: 500px;
+  background: #000;
+  margin: auto;
 }
 .settingMenu li .popup.active {
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.25);
-  transiton: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+  display: block;
 }
