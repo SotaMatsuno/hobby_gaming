@@ -7,8 +7,14 @@ if(lb != null){
         p.classList.add('active');
     });
 }
+const bc = document.querySelector('.btn-close');
 
-const btn = document.getElementById('logout');
+    bc.addEventListener('click', function() {
+        p.classList.remove('active');
+    });
+
+
+const btn = document.getElementById('logout');     //同じページにidがない場合jsがえらーをおこすのでif文で分岐させる
 const box = document.querySelector('.logout-box');
 if(btn != null){
     btn.addEventListener('click', function() {

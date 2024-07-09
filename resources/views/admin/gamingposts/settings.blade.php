@@ -13,14 +13,12 @@
             <p>アカウント</p>
         </li>
         <li>
-            <div id="lb">ログアウト</div>
+            <a id="lb"><div>ログアウト</div></a>
             <div class="popup">
-                <p>ログアウト</p>
-                <button type="button" class="btn-close"></button>
-                <div>
-                    <p>ログアウトしますか？</p>
-                    <button>ログアウト</button>
-                </div>
+                <h1>ログアウト</h1>
+                <button class="btn-close"></button>
+                <p>ログアウトしますか？</p>
+                <button>ログアウト</button>
             </div>
         </li>
         <li>

@@ -396,10 +396,41 @@ h3 {
 }
 .settingMenu li .popup {
   display: none;
-  width: 500px;
-  background: #000;
+  border: 1px solid #000;
+  width: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
+  height: 120px;
+  background: #fff;
 }
 .settingMenu li .popup.active {
   display: block;
+}
+.settingMenu li .popup h1 {
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+}
+.settingMenu li .popup .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+}
+.settingMenu li .popup p {
+  text-align: left;
+  padding: 10px;
+}
+.settingMenu li .popup button {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  width: 100px;
+  height: 25px;
 }
