@@ -386,13 +386,13 @@ h3 {
 }
 .settingMenu li {
   border: 1px solid #000;
-  padding: 20px;
-  text-align: center;
 }
-.settingMenu li #lb {
-  width: 200px;
-  margin: 0 auto;
+.settingMenu li .settingMenuButton {
+  text-align: center;
+  display: block;
+  width: 100%;
   cursor: pointer;
+  padding: 20px;
 }
 .settingMenu li .popup {
   display: none;
@@ -406,11 +406,12 @@ h3 {
   margin: auto;
   height: 120px;
   background: #fff;
+  border-radius: 5px;
 }
 .settingMenu li .popup.active {
   display: block;
 }
-.settingMenu li .popup h1 {
+.settingMenu li .popup h2 {
   border-bottom: 1px solid #000;
   font-size: 15px;
   padding: 10px;
@@ -433,4 +434,69 @@ h3 {
   right: 10px;
   width: 100px;
   height: 25px;
+}
+.settingMenu li .popupEmail {
+  display: none;
+  border: 1px solid #000;
+  width: 40%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 120px;
+  background: #fff;
+  border-radius: 5px;
+}
+.settingMenu li .popupEmail.active {
+  display: block;
+}
+.settingMenu li .popupEmail h2 {
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+}
+.settingMenu li .popupEmail .btn-close-email {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+}
+.settingMenu li .popupPassword {
+  display: none;
+  border: 1px solid #000;
+  width: 40%;
+  padding: 20px;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 5px;
+}
+.settingMenu li .popupPassword.active {
+  display: block;
+}
+.settingMenu li .popupPassword h2 {
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+}
+.settingMenu li .popupPassword div {
+  margin-bottom: 10px;
+}
+.settingMenu li .popupPassword div input {
+  width: 100%;
+}
+.settingMenu li .popupPassword .btn-close-password {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
 }
