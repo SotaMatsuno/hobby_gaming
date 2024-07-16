@@ -1,16 +1,17 @@
 {{-- layouts/admin.blade.phpを読み込む --}}
-@extends('layouts.admin')
+@extends('layouts.front')
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
 @section('title', '新規作成')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
-<div class="container">
+<div class="bg-02-settings">
+    <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>新規作成</h2>
-                <form action="{{ route('admin.gameposts.create') }}" method="post" enctype="multipart/form-data">
+                <h2>マリオゲームレビュー一覧新着順</h2>
+                <form action="{{ route('admin.gamingposts.create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
@@ -42,5 +43,6 @@
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
+</div>
 @endsection

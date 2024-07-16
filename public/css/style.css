@@ -417,7 +417,7 @@ h3 {
   padding: 10px;
   text-align: left;
 }
-.settingMenu li .popup .btn-close {
+.settingMenu li .popup .btn-close-logout {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -464,6 +464,13 @@ h3 {
   right: 10px;
   width: 10px;
   height: 10px;
+}
+.settingMenu li .popupEmail button {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  width: 100px;
+  height: 25px;
 }
 .settingMenu li .popupPassword {
   display: none;

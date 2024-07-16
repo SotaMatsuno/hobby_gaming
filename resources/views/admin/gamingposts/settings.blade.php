@@ -25,7 +25,7 @@
             <a id="eb" class="settingMenuButton">メールアドレス変更</a>
             <div class="popupEmail">
                 <h2>メールアドレス変更</h2>
-                <label for="e-mail">Email</label>
+                <label for="e-mail">メールアドレス</label>
                 <input type="text" id="e-mail" placeholder="Enter email">
                 <button class="btn-close-email btn-close"></button>
                 <button>変更</button>    
