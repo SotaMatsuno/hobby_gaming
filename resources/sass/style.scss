@@ -32,6 +32,62 @@
     }
 }
 
+//投稿ページ用のsass
+.review-input{
+    box-shadow:0 0 2px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    padding:20px 20px 24px;
+    margin:16px 4px;
+    border-radius:2px;
+    background:#fff;
+    
+    /* 動作の基本となるcss */
+    .review-score-area{
+        display:inline-flex;
+        flex-direction:row-reverse;
+    }
+    .hidden--visually{
+        border:0;
+        clip:rect(1px 1px 1px 1px);
+        clip:rect(1px, 1px, 1px, 1px);
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+        padding:0;
+        position:absolute;
+        width:1px;
+    }
+    /* ここでデザインの変更 */
+    .rating__label{
+        cursor:pointer;
+        color:gray;
+        padding-left:0.25rem;
+        padding-right:0.25rem;
+    }
+    .rating__icon::before{
+        content:url('/img/icon-mariostar.png');        
+        //font-size:2rem;
+        padding:1rem;
+    }
+    .rating__input:hover ~ .rating__label{
+        color:lightgray;
+    }
+    .rating__input:checked ~ .rating__label{
+        color:#ffbb00;
+    }
+    .review-title{
+        border-top:1px solid #ebebeb;
+        margin:8px 0 0;
+        padding:16px 0;
+        line-height:1;
+    }
+    .review-txt-area{
+        border-top:1px solid #ebebeb;
+        border-bottom:1px solid #ebebeb;
+        padding:16px 0;
+        word-break:break-all;
+    }
+}
+
 //設定ページ用のsass
 .bg-02-settings{
     background-image:url('/img/bg-02.png');
