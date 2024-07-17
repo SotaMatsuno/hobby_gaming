@@ -387,31 +387,21 @@ h3 {
   flex-direction: row-reverse;
 }
 .review-input .hidden--visually {
-  border: 0;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  display: none;
 }
 .review-input .rating__label {
   cursor: pointer;
   color: gray;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 .review-input .rating__icon::before {
+  content: url("/img/icon-gstar.png");
+  width: 43px;
+  height: 38px;
+}
+.review-input .rating__input:checked ~ .rating__label .rating__icon::before {
   content: url("/img/icon-mariostar.png");
-  padding: 1rem;
-}
-.review-input .rating__input:hover ~ .rating__label {
-  color: lightgray;
-}
-.review-input .rating__input:checked ~ .rating__label {
-  color: #ffbb00;
+  width: 43px;
+  height: 38px;
 }
 .review-input .review-title {
   border-top: 1px solid #ebebeb;
@@ -424,6 +414,14 @@ h3 {
   border-bottom: 1px solid #ebebeb;
   padding: 16px 0;
   word-break: break-all;
+}
+.review-input .input-text {
+  padding: 5px;
+  width: 100%;
+  border: none;
+}
+.review-input .input-text:focus {
+  outline: none;
 }
 
 .bg-02-settings {

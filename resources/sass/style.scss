@@ -46,33 +46,36 @@
         flex-direction:row-reverse;
     }
     .hidden--visually{
-        border:0;
-        clip:rect(1px 1px 1px 1px);
-        clip:rect(1px, 1px, 1px, 1px);
-        height:1px;
-        margin:-1px;
-        overflow:hidden;
-        padding:0;
-        position:absolute;
-        width:1px;
+        // border:0;
+        // clip:rect(1px 1px 1px 1px);
+        // clip:rect(1px, 1px, 1px, 1px);
+        // height:1px;
+        // margin:-1px;
+        // overflow:hidden;
+        // padding:0;
+        // position:absolute;
+        // width:1px;
+        display:none;
     }
     /* ここでデザインの変更 */
     .rating__label{
         cursor:pointer;
         color:gray;
-        padding-left:0.25rem;
-        padding-right:0.25rem;
+        // padding-left:0.25rem;
+        // padding-right:0.25rem;
     }
     .rating__icon::before{
-        content:url('/img/icon-mariostar.png');        
-        //font-size:2rem;
-        padding:1rem;
+        content:url('/img/icon-gstar.png');
+        // font-size:2rem;
+        // padding:1rem;
+        
+        width:43px;
+        height:38px;
     }
-    .rating__input:hover ~ .rating__label{
-        color:lightgray;
-    }
-    .rating__input:checked ~ .rating__label{
-        color:#ffbb00;
+    .rating__input:checked ~ .rating__label .rating__icon::before{
+        content:url('/img/icon-mariostar.png');
+        width:43px;
+        height:38px;
     }
     .review-title{
         border-top:1px solid #ebebeb;
@@ -86,7 +89,15 @@
         padding:16px 0;
         word-break:break-all;
     }
-}
+    .input-text{
+        padding:5px;
+        width:100%;
+        border:none;
+        &:focus{
+            outline: none;
+        }
+    }
+}//review-input
 
 //設定ページ用のsass
 .bg-02-settings{
