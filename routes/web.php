@@ -20,13 +20,13 @@ Route::get('/', function () {
 use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, 'toppage'])->name('toppage');
 Route::get('/games', [PublicController::class, 'gamesView'])->name('games.gamesView');
-Route::get('/posts', [PublicController::class, 'gameposts'])->name('gameposts.');
+Route::get('/posts', [PublicController::class, 'gamePosts'])->name('gamePosts');
 
 use App\Http\Controllers\Admin\GamesController;
 Route::controller(GamesController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-    Route::get('gamingposts/create', 'add')->name('gamingposts.add');
-    Route::post('gamingposts/create', 'create')->name('gamingposts.create');
     Route::get('gamingposts/settings', 'settingAdd')->name('settings.add');
+    Route::get('gamingposts/create', 'add')->name('gamingposts.add');
+    Route::post('gamingposts/crate', 'create')->name('gamingposts.create');
 });
 
 Auth::routes();

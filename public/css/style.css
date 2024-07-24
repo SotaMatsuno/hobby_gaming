@@ -373,7 +373,13 @@ h3 {
   width: 50%;
 }
 
-.review-input {
+.bg-02-settings {
+  background-image: url("/img/bg-02.png");
+  padding-bottom: 30px;
+  padding: 50px;
+  margin-bottom: 30px;
+}
+.bg-02-settings .review-input {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   padding: 20px 20px 24px;
   margin: 16px 4px;
@@ -382,52 +388,77 @@ h3 {
   /* 動作の基本となるcss */
   /* ここでデザインの変更 */
 }
-.review-input .review-score-area {
+.bg-02-settings .review-input .review-score-area {
   display: inline-flex;
   flex-direction: row-reverse;
+  padding-left: 20px;
 }
-.review-input .hidden--visually {
+.bg-02-settings .review-input .hidden--visually {
   display: none;
 }
-.review-input .rating__label {
+.bg-02-settings .review-input .rating__label {
+  position: relative;
   cursor: pointer;
   color: gray;
 }
-.review-input .rating__icon::before {
+.bg-02-settings .review-input .rating__icon::before {
   content: url("/img/icon-gstar.png");
   width: 43px;
   height: 38px;
 }
-.review-input .rating__input:checked ~ .rating__label .rating__icon::before {
+.bg-02-settings .review-input .rating__input:checked ~ .rating__label .rating__icon::before {
   content: url("/img/icon-mariostar.png");
   width: 43px;
   height: 38px;
 }
-.review-input .review-title {
+.bg-02-settings .review-input .review-title {
   border-top: 1px solid #ebebeb;
   margin: 8px 0 0;
   padding: 16px 0;
   line-height: 1;
 }
-.review-input .review-txt-area {
+.bg-02-settings .review-input .review-title .input-text {
+  padding: 5px;
+  width: 100%;
+  border: none;
+}
+.bg-02-settings .review-input .review-title .input-text:focus {
+  outline: none;
+}
+.bg-02-settings .review-input .review-txt-area {
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
   padding: 16px 0;
   word-break: break-all;
 }
-.review-input .input-text {
+.bg-02-settings .review-input .review-txt-area .text-area {
   padding: 5px;
   width: 100%;
   border: none;
 }
-.review-input .input-text:focus {
+.bg-02-settings .review-input .review-txt-area .text-area:focus {
   outline: none;
 }
-
-.bg-02-settings {
-  background-image: url("/img/bg-02.png");
-  padding-bottom: 30px;
-  padding: 50px;
+.bg-02-settings .review-input .review-btn-box {
+  text-align: center;
+}
+.bg-02-settings .review-input .review-btn-box .review-btn {
+  margin: auto 0;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 15pt;
+  text-align: center; /* 文字位置 */
+  cursor: pointer; /* カーソル */
+  padding: 12px 70px; /* 余白 */
+  background: #FAD528;
+  color: #ffffff; /* 文字色 */
+  transition: 0.3s; /* なめらか変化 */
+  border: 2px solid #1a1aff; /* 枠の指定 */
+}
+.bg-02-settings .review-input .review-btn-box .review-btn:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  color: #FAD528; /* 文字色 */
+  background: #ffffff; /* 背景色 */
 }
 
 .settingMenu {

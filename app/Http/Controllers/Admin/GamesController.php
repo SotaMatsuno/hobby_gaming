@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class GamesController extends Controller
 {
+    public function settingAdd()
+    {
+        return view('admin.gamingposts.settings');
+    }
+    
     public function add()
     {
         return view('admin.gamingposts.create');
@@ -14,12 +19,7 @@ class GamesController extends Controller
     
     public function create(Request $request)
     {
-        // admin/gamingposts/createにリダイレクトする
-        return redirect('admin/gamingposts/create');
-    }
-    
-    public function settingAdd()
-    {
-        return view('admin.gamingposts.settings');
+        // admin/news/createにリダイレクトする
+        return redirect('admin/gaminposts/create');
     }
 }

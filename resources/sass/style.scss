@@ -33,79 +33,111 @@
 }
 
 //投稿ページ用のsass
-.review-input{
-    box-shadow:0 0 2px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-    padding:20px 20px 24px;
-    margin:16px 4px;
-    border-radius:2px;
-    background:#fff;
-    
-    /* 動作の基本となるcss */
-    .review-score-area{
-        display:inline-flex;
-        flex-direction:row-reverse;
-    }
-    .hidden--visually{
-        // border:0;
-        // clip:rect(1px 1px 1px 1px);
-        // clip:rect(1px, 1px, 1px, 1px);
-        // height:1px;
-        // margin:-1px;
-        // overflow:hidden;
-        // padding:0;
-        // position:absolute;
-        // width:1px;
-        display:none;
-    }
-    /* ここでデザインの変更 */
-    .rating__label{
-        cursor:pointer;
-        color:gray;
-        // padding-left:0.25rem;
-        // padding-right:0.25rem;
-    }
-    .rating__icon::before{
-        content:url('/img/icon-gstar.png');
-        // font-size:2rem;
-        // padding:1rem;
-        
-        width:43px;
-        height:38px;
-    }
-    .rating__input:checked ~ .rating__label .rating__icon::before{
-        content:url('/img/icon-mariostar.png');
-        width:43px;
-        height:38px;
-    }
-    .review-title{
-        border-top:1px solid #ebebeb;
-        margin:8px 0 0;
-        padding:16px 0;
-        line-height:1;
-    }
-    .review-txt-area{
-        border-top:1px solid #ebebeb;
-        border-bottom:1px solid #ebebeb;
-        padding:16px 0;
-        word-break:break-all;
-    }
-    .input-text{
-        padding:5px;
-        width:100%;
-        border:none;
-        &:focus{
-            outline: none;
-        }
-    }
-}//review-input
-
-//設定ページ用のsass
 .bg-02-settings{
     background-image:url('/img/bg-02.png');
     padding-bottom:30px;
     padding:50px;
+    margin-bottom:30px;
+    .review-input{
+        box-shadow:0 0 2px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+        padding:20px 20px 24px;
+        margin:16px 4px;
+        border-radius:2px;
+        background:#fff;
+        p{
+            
+        }
+        /* 動作の基本となるcss */
+        .review-score-area{
+            display:inline-flex;
+            flex-direction:row-reverse;
+            padding-left:20px;
+        }
+        .hidden--visually{
+            // border:0;
+            // clip:rect(1px 1px 1px 1px);
+            // clip:rect(1px, 1px, 1px, 1px);
+            // height:1px;
+            // margin:-1px;
+            // overflow:hidden;
+            // padding:0;
+            // position:absolute;
+            // width:1px;
+            display:none;
+        }
+        /* ここでデザインの変更 */
+        .rating__label{
+            position: relative;
+            cursor:pointer;
+            color:gray;
+            // padding-left:0.25rem;
+            // padding-right:0.25rem;
+        }
+        .rating__icon::before{
+            content:url('/img/icon-gstar.png');
+            // font-size:2rem;
+            // padding:1rem;
+            
+            width:43px;
+            height:38px;
+        }
+        .rating__input:checked ~ .rating__label .rating__icon::before{
+            content:url('/img/icon-mariostar.png');
+            width:43px;
+            height:38px;
+        }
+        .review-title{
+            border-top:1px solid #ebebeb;
+            margin:8px 0 0;
+            padding:16px 0;
+            line-height:1;
+            .input-text{
+                padding:5px;
+                width:100%;
+                border:none;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .review-txt-area{
+            border-top:1px solid #ebebeb;
+            border-bottom:1px solid #ebebeb;
+            padding:16px 0;
+            word-break:break-all;
+            .text-area{
+                padding:5px;
+                width:100%;
+                border:none;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .review-btn-box{
+            text-align:center;
+            .review-btn{
+                margin:auto 0;
+                display:inline-block;
+                border-radius:5px;
+                font-size:15pt;
+                text-align:center;/* 文字位置 */
+                cursor:pointer;/* カーソル */
+                padding:12px 70px;/* 余白 */
+                background:#FAD528;
+                color:#ffffff;/* 文字色 */
+                transition:.3s;/* なめらか変化 */
+                border:2px solid #1a1aff;/* 枠の指定 */
+                &:hover{
+                    box-shadow:none;/* カーソル時の影消去 */
+                    color:#FAD528;/* 文字色 */
+                    background:#ffffff;/* 背景色 */
+                }
+            }
+        }
+    }//review-input
 }
-
+//設定ページ用のsass
 .settingMenu{
     width:800px;
     margin:0 auto;
