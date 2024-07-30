@@ -269,9 +269,10 @@ h3 {
   background: #FAD528;
   border: 1px solid #000;
   margin-bottom: 30px;
-  padding: 10px;
   border-radius: 5px;
   text-align: center;
+  margin-top: 30px;
+  padding: 20px;
 }
 .mario-nav li .mario-nav-posts {
   display: block;
@@ -279,9 +280,10 @@ h3 {
   background: #FAD528;
   border: 1px solid #000;
   margin-bottom: 30px;
-  padding: 10px;
   border-radius: 5px;
   text-align: center;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 .up-btn {
@@ -299,10 +301,10 @@ h3 {
   background-image: url("/img/bg-01.png");
   padding-bottom: 30px;
 }
-
 .bg-02 {
   background-image: url("/img/bg-02.png");
   padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .letter {

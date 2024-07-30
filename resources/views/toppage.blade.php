@@ -5,7 +5,7 @@
 {{-- front.blade.phpの@yield('title')に'トップページ'を埋め込む --}}
 @section('title', 'トップページ')
 @section('mainimage')
-    <div><img src="{{ secure_asset('img/main-image.png') }}"></div>
+    <div class="mainimg"><img src="{{ secure_asset('img/main-image.png') }}"></div>
 @endsection
 
 {{-- front.blade.phpの@yield('content')に以下のタグを埋め込む --}}
