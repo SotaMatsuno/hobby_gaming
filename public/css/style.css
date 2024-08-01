@@ -375,6 +375,25 @@ h3 {
   width: 50%;
 }
 
+.container .post {
+  width: 100%;
+  border: 1px solid #000;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+.container .post .post-img {
+  width: 18%;
+}
+.container .post .post-text {
+  padding: 20px;
+}
+.container .post .post-text .post-text-area {
+  width: 50%;
+  border: none;
+}
+
 .bg-02-settings {
   background-image: url("/img/bg-02.png");
   padding-bottom: 30px;

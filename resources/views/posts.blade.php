@@ -8,9 +8,9 @@
 @section('content')
 <div class="container">
         <h1>レビュー一覧</h1>
-        <div class="post">
-            <div class="post-img">
-                <img>
+        <div class="post d-flex">
+            <div class="post-img d-flex">
+                <img src="{{ secure_asset('img/mario64.jpg') }}" alt="スーパーマリオ64">
             </div>
             <div class="post-text">
                 <div class="d-flex">
@@ -21,10 +21,10 @@
                         <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span>
                         <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星1つ</span>
                     </div>
-                    <h2>タイトル</h2>
+                    <p>タイトル</p>
                 </div>
                 <div>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <textarea class="post-text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</textarea>
                 </div>
                 <div class="d-flex">
                     <p>名前</p>

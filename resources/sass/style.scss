@@ -32,6 +32,27 @@
     }
 }
 
+//投稿閲覧用のsass
+.container{
+    .post{
+        width:100%;
+        border:1px solid #000;
+        margin-bottom:30px;
+        padding:10px;
+        border-radius:10px;
+        background:#fff;
+        .post-img{
+            width:18%;
+        }
+        .post-text{
+            padding:20px;
+            .post-text-area{
+                width:50%;
+                border:none;
+            }
+        }
+    }
+}
 //投稿ページ用のsass
 .bg-02-settings{
     background-image:url('/img/bg-02.png');

@@ -17,6 +17,10 @@
             </ul>
         @endif
         <div class="review-input">
+            <select name="name">
+                <option value="マリオ64">マリオ64</option>
+                <option value="マリオカート64">マリオカート64</option>
+            </select>
             <div class="d-flex align-items-center">
                 <p>評価</p>
                 <div class="review-score-area">
@@ -32,10 +36,10 @@
                 </div>
             </div>
             <div class="review-title">
-                <input class="input-text" placeholder="レビュータイトル" type="text" name="mario_review" id="mario_review_subject">
+                <input class="input-text" placeholder="レビュータイトル" type="text" name="title" id="mario_review_subject">
             </div>
             <div class="review-txt-area mb-4">
-                <div class="review-txt"><textarea class="text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10"></textarea></div> 
+                <div class="review-txt"><textarea class="text-area" placeholder="本文" name="body" id="movie_review_body" cols="40" rows="10"></textarea></div> 
             </div>
             @csrf
             <div class="review-btn-box">

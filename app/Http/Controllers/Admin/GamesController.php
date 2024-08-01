@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\MarioReview;
 
 class GamesController extends Controller
 {
@@ -19,7 +20,20 @@ class GamesController extends Controller
     
     public function create(Request $request)
     {
-        // admin/news/createにリダイレクトする
-        return redirect('admin/gaminposts/create');
+        // Validationを行う
+        $this->validate($request, MarioReview::$rules);
+        $review = new MarioReview;
+        $form = $request->all();
+        
+        //フォームから送信されてきた_tokenを削除する
+        unset($form['_token']);//csrfを消している
+        
+        //データベースに保存する
+        $review->fill($form);
+        $review->save();
+        
+        // 投稿一覧ページにリダイレクトする
+        return redirect('posts');
+        
     }
 }
