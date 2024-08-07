@@ -409,6 +409,14 @@ h3 {
   /* 動作の基本となるcss */
   /* ここでデザインの変更 */
 }
+.bg-02-settings .review-input .review-gamename {
+  width: 15%;
+  margin-bottom: 25px;
+}
+.bg-02-settings .review-input .review-gamename div {
+  padding: 40px;
+  font-size: 15px;
+}
 .bg-02-settings .review-input .review-score-area {
   display: inline-flex;
   flex-direction: row-reverse;

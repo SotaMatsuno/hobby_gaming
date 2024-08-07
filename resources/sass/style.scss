@@ -65,8 +65,13 @@
         margin:16px 4px;
         border-radius:2px;
         background:#fff;
-        p{
-            
+        .review-gamename{
+            width:15%;
+            margin-bottom:25px;
+            div{
+                padding:40px;
+                font-size:15px;
+            }
         }
         /* 動作の基本となるcss */
         .review-score-area{
