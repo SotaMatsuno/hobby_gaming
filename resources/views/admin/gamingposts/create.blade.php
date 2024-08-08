@@ -18,27 +18,28 @@
         @endif
         <div class="review-input">
             <div class="review-gamename d-flex">
-                <img src="{{ secure_asset('img/スーパーマリオ64.jpg') }}" alt="画像">
+                <div class="postimg"><img src="{{ secure_asset('img/'. $gamename .'.jpg' ) }}" alt="画像"></div>
                 <div>
                     <p>ゲーム名</p>
-                    <select name="name">
-                        <option value="スーパーマリオ64">スーパーマリオ64</option>
-                        <option value="マリオカート64">マリオカート64</option>
-                        <option value="マリオパーティ2">マリオパーティ2</option>
-                        <option value="マリオパーティ3">マリオパーティ3</option>
-                        <option value="マリオパーティ4">マリオパーティ4</option>
-                        <option value="マリオカートダブルダッシュ!!">マリオカートダブルダッシュ!!</option>
-                        <option value="マリオパーティ5">マリオパーティ5</option>
-                        <option value="マリオパーティ6">マリオパーティ6</option>
-                        <option value="スーパーペーパーマリオ">スーパーペーパーマリオ</option>
-                        <option value="スーパーマリオギャラクシー">スーパーマリオギャラクシー</option>
-                        <option value="スーパーマリオギャラクシー2">スーパーマリオギャラクシー2</option>
-                        <option value="スーパーマリオ3Dワールド">スーパーマリオ3Dワールド</option>
-                        <option value="マリオカート8デラックス">マリオカート8デラックス</option>
-                        <option value="スーパーマリオオデッセイ">スーパーマリオオデッセイ</option>
-                        <option value="進め！キノピオ隊長">進め！キノピオ隊長</option>
-                        <option value="スーパーマリオパーティ">スーパーマリオパーティ</option>
-                    </select>
+                    <h3>{{ $gamename }}</h3>
+                    <!--<select name="name">-->
+                    <!--    <option value="スーパーマリオ64">スーパーマリオ64</option>-->
+                    <!--    <option value="マリオカート64">マリオカート64</option>-->
+                    <!--    <option value="マリオパーティ2">マリオパーティ2</option>-->
+                    <!--    <option value="マリオパーティ3">マリオパーティ3</option>-->
+                    <!--    <option value="マリオパーティ4">マリオパーティ4</option>-->
+                    <!--    <option value="マリオカートダブルダッシュ!!">マリオカートダブルダッシュ!!</option>-->
+                    <!--    <option value="マリオパーティ5">マリオパーティ5</option>-->
+                    <!--    <option value="マリオパーティ6">マリオパーティ6</option>-->
+                    <!--    <option value="スーパーペーパーマリオ">スーパーペーパーマリオ</option>-->
+                    <!--    <option value="スーパーマリオギャラクシー">スーパーマリオギャラクシー</option>-->
+                    <!--    <option value="スーパーマリオギャラクシー2">スーパーマリオギャラクシー2</option>-->
+                    <!--    <option value="スーパーマリオ3Dワールド">スーパーマリオ3Dワールド</option>-->
+                    <!--    <option value="マリオカート8デラックス">マリオカート8デラックス</option>-->
+                    <!--    <option value="スーパーマリオオデッセイ">スーパーマリオオデッセイ</option>-->
+                    <!--    <option value="進め！キノピオ隊長">進め！キノピオ隊長</option>-->
+                    <!--    <option value="スーパーマリオパーティ">スーパーマリオパーティ</option>-->
+                    <!--</select>-->
                 </div>
             </div>
             <div class="d-flex align-items-center">

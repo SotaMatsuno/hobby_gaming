@@ -13,9 +13,9 @@ class GamesController extends Controller
         return view('admin.gamingposts.settings');
     }
     
-    public function add()
+    public function add($gamename)
     {
-        return view('admin.gamingposts.create');
+        return view('admin.gamingposts.create' , ['gamename' => $gamename]);
     }
     
     public function create(Request $request)

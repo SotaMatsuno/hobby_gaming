@@ -7,13 +7,8 @@
 {{-- front.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 <div id="bg_test">
-    <ul>
-        <li><a href="#">ゲームソフト</a></li>
-        <li><a href="#">投稿一覧</a></li>
-    </ul>
-    
     <div class="gameList d-flex flex-wrap justify-content-around">
-        <a href="#" class="gameCont">
+        <a href="{{ route('admin.gamingposts.add', ['gamename' => 'スーパーマリオ64']) }}" class="gameCont">
             <div class="d-flex justify-content-around">
                 <div class="gameContImg"><img src="{{ secure_asset('img/スーパーマリオ64.jpg') }}" alt="スーパーマリオ64"></div>
                 <div class="gameContText">
@@ -23,7 +18,7 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="gameCont">
+        <a href="{{ route('admin.gamingposts.add', ['gamename' => 'マリオカート64']) }}" class="gameCont">
             <div class="d-flex justify-content-around">
                 <div class="gameContImg"><img src="{{ secure_asset('img/マリオカート64.jpg') }}" alt="マリオカート64"></div>
                 <div class="gameContText">

@@ -25,8 +25,8 @@ Route::get('/posts', [PublicController::class, 'gamePosts'])->name('gamePosts');
 use App\Http\Controllers\Admin\GamesController;
 Route::controller(GamesController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
     Route::get('gamingposts/settings', 'settingAdd')->name('settings.add');
-    Route::get('gamingposts/create', 'add')->name('gamingposts.add');
-    Route::post('gamingposts/crate', 'create')->name('gamingposts.create');
+    Route::get('gamingposts/create/{gamename}', 'add')->name('gamingposts.add');
+    Route::post('gamingposts/create', 'create')->name('gamingposts.create');
 });
 
 Auth::routes();

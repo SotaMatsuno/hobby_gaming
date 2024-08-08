@@ -356,7 +356,7 @@ h3 {
 }
 
 #bg_test {
-  background-image: url("/img/bg-01.png");
+  background-image: url("/img/bg-02.png");
 }
 
 .gameList .gameCont {
@@ -480,9 +480,9 @@ h3 {
   cursor: pointer; /* カーソル */
   padding: 12px 70px; /* 余白 */
   background: #FAD528;
-  color: #ffffff; /* 文字色 */
+  color: #000; /* 文字色 */
   transition: 0.3s; /* なめらか変化 */
-  border: 2px solid #1a1aff; /* 枠の指定 */
+  border: 2px solid #000; /* 枠の指定 */
 }
 .bg-02-settings .review-input .review-btn-box .review-btn:hover {
   box-shadow: none; /* カーソル時の影消去 */
