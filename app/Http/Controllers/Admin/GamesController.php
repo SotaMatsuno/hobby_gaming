@@ -15,6 +15,9 @@ class GamesController extends Controller
     
     public function add($gamename)
     {
+        if (empty($gamename)) {
+            abort(404);
+        }
         return view('admin.gamingposts.create' , ['gamename' => $gamename]);
     }
     
@@ -34,6 +37,9 @@ class GamesController extends Controller
         
         // 投稿一覧ページにリダイレクトする
         return redirect('posts');
-        
+    }
+    
+    public function _404(){
+        abort(404);
     }
 }

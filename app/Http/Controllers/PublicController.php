@@ -13,7 +13,17 @@ class PublicController extends Controller
     
     public function gamesView()
     {
-        return view('games');
+        $games = [
+            [
+                "name" => "スーパーマリオ64",
+                "nen" => "1996.06.23"
+            ];
+            [
+            ]
+                "マリオカート64","マリオパーティ2","マリオパーティ3","マリオパーティ4","マリオカートダブルダッシュ!!","マリオパーティ5",
+        "マリオパーティ6","スーパーペーパーマリオ","スーパーマリオギャラクシー","スーパーマリオギャラクシー2","スーパーマリオ3Dワールド","マリオカート8デラックス",
+        "スーパーマリオオデッセイ","進め！キノピオ隊長","スーパーマリオパーティ"];
+        return view('games',['games' => $games]);
     }
     
     public function gamePosts()
