@@ -20,6 +20,9 @@
                 </div>
             </a>
         @endforeach
+    </div>
+</div>
+@endsection
         <!--<a href="{{ route('admin.gamingposts.add', ['gamename' => 'マリオカート64']) }}" class="gameCont">-->
         <!--    <div class="d-flex justify-content-around">-->
         <!--        <div class="gameContImg"><img src="{{ secure_asset('img/マリオカート64.jpg') }}" alt="マリオカート64"></div>-->
@@ -177,7 +180,3 @@
         <!--        </div>-->
         <!--    </div>-->
         <!--</a>-->
-    </div>
-</div>
-    
-@endsection
