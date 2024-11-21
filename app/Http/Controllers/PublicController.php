@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\MarioReview;
 
 class PublicController extends Controller
 {
@@ -85,14 +86,14 @@ class PublicController extends Controller
     //投稿したレビューを表示する
     public function gamePosts(Request $request)
     {
-        // $cond_title = $request->cond_title;
-        // if ($cond_title != '') {
-        //     // 検索されたら検索結果を取得する
-        //     $posts = News::where('title', $cond_title)->get();
-        // } else {
-        //     // それ以外はすべてのレビューを取得する
-        //     $posts = News::all();
-        // }
-        return view('posts');
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            // 検索されたら検索結果を取得する
+            $posts = MarioReview::where('title', $cond_title)->get();
+        } else {
+            // それ以外はすべてのレビューを取得する
+            $posts = MarioReview::all();
+        }
+        return view('posts', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 }

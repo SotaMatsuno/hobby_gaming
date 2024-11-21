@@ -20,7 +20,6 @@
             <div class="review-gamename d-flex">
                 <div class="postimg"><img src="{{ secure_asset('img/'. $gamename .'.jpg' ) }}" alt="画像"></div>
                 <div>
-                    <p>ゲーム名</p>
                     <h3>{{ $gamename }}</h3>
                     <!--<select name="name">-->
                     <!--    <option value="スーパーマリオ64">スーパーマリオ64</option>-->
@@ -62,6 +61,7 @@
             <div class="review-txt-area mb-4">
                 <div class="review-txt"><textarea class="text-area" placeholder="本文" name="body" id="movie_review_body" cols="40" rows="10"></textarea></div> 
             </div>
+            <input type="hidden" value="{{ $gamename }}" name="name">
             @csrf
             <div class="review-btn-box">
                 <input type="submit" value="投稿" class="review-btn">
