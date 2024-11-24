@@ -51,7 +51,8 @@
                     <input class="rating__input hidden--visually" type="radio" id="3-star" name="rating" value="3" />
                     <label class="rating__label" for="3-star" title="星3つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星3つ</span></label>
                     <input class="rating__input hidden--visually" type="radio" id="2-star" name="rating" value="2" />
-                    <label class="rating__label" for="2-star" title="星2つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span></label>                    <input class="rating__input hidden--visually" type="radio" id="1-star" name="rating" value="1" />
+                    <label class="rating__label" for="2-star" title="星2つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span></label>
+                    <input class="rating__input hidden--visually" type="radio" id="1-star" name="rating" value="1" />
                     <label class="rating__label" for="1-star" title="星1つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星1つ</span></label>
                 </div>
             </div>
