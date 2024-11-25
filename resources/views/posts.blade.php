@@ -15,18 +15,20 @@
         </div>
         <div>
             <div class="review-score-area">
-                <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">{{ $rev->rating }}</span>
-                <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星4つ</span>
-                <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星3つ</span>
-                <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span>
-                <span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星1つ</span>
+                <div class="d-flex">
+                    @for($a = 0; $a < $rev->rating; $a++)
+                            <div><img src="{{ secure_asset('img/icon-mariostar.png') }}"></div>
+                    @endfor
+                    @for($i = 0; $i < 5 - $rev->rating; $i++)
+                        <div><img src="{{ secure_asset('img/icon-gstar.png') }}"></div>
+                    @endfor
+                </div>
             </div>
-            <p>{{ $rev->title }}</p>
+            <h3>{{ $rev->title }}</h3>
             <div class="post-text">
                 <textarea class="post-text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10">{{ $rev->body }}</textarea>
             </div>
-            <div class="d-flex">
-                <p>{{ Auth::user()->name }}</p>
+            <div>
                 <p>{{ $rev->created_at->format('Y-m-d'); }}</p>
             </div>
         </div>

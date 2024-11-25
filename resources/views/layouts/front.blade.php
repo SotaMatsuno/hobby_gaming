@@ -44,7 +44,7 @@
                     {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                     @guest
                         <li><a href="{{ route('login') }}">ログイン</a></li>
-                        <li><a id="logout" href="#">新規登録</a></li>
+                        <li><a id="logout" href="{{ route('register') }}">新規登録</a></li>
                     {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                     @else
                         <li class="nav-item dropdown">
