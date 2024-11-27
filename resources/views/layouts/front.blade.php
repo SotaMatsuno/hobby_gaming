@@ -100,7 +100,7 @@
             <div class="d-flex">
                 <ul class="mario-nav d-flex">
                     <li><a href="{{ url('/games') }}" class="mario-nav-games">ゲームソフト</a></li>
-                    <li><a href="{{ url('/posts') }}" class="mario-nav-posts">投稿一覧</a></li>
+                    <li><a href="{{ url('/admin/gamingposts/create') }}" class="mario-nav-posts">投稿作成</a></li>
                 </ul>
                 <div><a href="#" class="up-btn"><img src="{{ secure_asset('img/up-btn.jpg') }}" alt="上へ戻るボタン"></a></div>
             </div>
