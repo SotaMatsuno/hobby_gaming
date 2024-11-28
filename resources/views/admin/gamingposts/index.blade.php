@@ -13,6 +13,14 @@
             <div class="post d-flex justify-content-around">
                 <div class="post-img">
                     <img src="{{ secure_asset('img/' . $rev->name . '.jpg') }}" alt="{{ $rev->name }}">
+                    <div>
+                        <div>
+                            <a href="{{ route('admin.gamingposts.edit', ['id' => $rev->id]) }}">編集</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('admin.gamingposts.delete', ['id' => $rev->id]) }}">削除</a>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div class="review-score-area">
@@ -30,7 +38,6 @@
                         <p class="post-text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10">{{ $rev->body }}</p>
                     </div>
                     <div>
-                        <p>{{$rev->user->name}}</p>
                         <p>{{ $rev->created_at->format('Y-m-d'); }}</p>
                     </div>
                 </div>

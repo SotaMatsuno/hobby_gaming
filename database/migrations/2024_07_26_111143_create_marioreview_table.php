@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('marioreview', function (Blueprint $table) { //命名規則に沿うとModelに関連付けされる
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            // $table->unsignedBigInteger('user_id');                      // 1
+            // $table->foreign('user_id')->references('id')->on('users');  // 2
             $table->string('name');
             $table->string('rating');
             $table->string('title');

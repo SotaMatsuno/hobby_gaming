@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\MarioReview;
+use Auth;
 
 class GamesController extends Controller
 {
@@ -26,6 +27,7 @@ class GamesController extends Controller
         // Validationを行う
         $this->validate($request, MarioReview::$rules);
         $review = new MarioReview;
+        $review->user_id = Auth::id();
         $form = $request->all();
         
         //フォームから送信されてきた_tokenを削除する
@@ -41,5 +43,15 @@ class GamesController extends Controller
     
     public function _404(){
         abort(404);
+    }
+    
+    public function edit(Request $request)
+    {
+        // News Modelからデータを取得する
+        $rev = MarioReview::find($request->id);
+        if (empty($rev)) {
+            abort(404);
+        }
+        return view('admin.gamingposts.edit', ['rev' => $rev]);
     }
 }

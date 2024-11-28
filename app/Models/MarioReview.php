@@ -18,4 +18,9 @@ class MarioReview extends Model
         'title' => 'required',
         'body' => 'required',
     );
+    
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

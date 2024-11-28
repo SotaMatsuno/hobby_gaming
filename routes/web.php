@@ -28,6 +28,10 @@ Route::controller(GamesController::class)->prefix('admin')->name('admin.')->midd
     Route::get('gamingposts/create/{gamename}', 'add')->name('gamingposts.add');
     Route::get('gamingposts/create', '_404');
     Route::post('gamingposts/create', 'create')->name('gamingposts.create');
+    Route::get('gamingposts', 'index')->name('gamingposts.index');
+    Route::get('gamingposts/edit', 'edit')->name('gamingposts.edit');
+    Route::post('gamingposts/edit', 'update')->name('gamingposts.update');
+    Route::get('gamingposts/delete', 'delete')->name('gamingposts.delete');
 });
 
 Auth::routes();
