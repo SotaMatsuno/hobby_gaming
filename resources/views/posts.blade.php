@@ -33,6 +33,7 @@
                         <p>{{$rev->user->name}}</p>
                         <p>{{ $rev->created_at->format('Y-m-d'); }}</p>
                     </div>
+                    <a href="{{ url('admin/gamingposts/edit') }}" class="mario-nav-posts-create">編集する</a>
                 </div>
             </div>
         @endforeach

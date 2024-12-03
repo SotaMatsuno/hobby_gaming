@@ -7,8 +7,8 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 <div class="bg-02-settings">
-    <h1> 編集</h1>
-    <form action="{{ route('admin.gamingposts.create') }}" method="post" enctype="multipart/form-data">
+    <h1>編集</h1>
+    <form action="{{ route('admin.gamingposts.update') }}" method="post" enctype="multipart/form-data">
         @if (count($errors) > 0)
             <ul>
                 @foreach($errors->all() as $e)
@@ -18,7 +18,7 @@
         @endif
         <div class="review-input">
             <div class="review-gamename d-flex">
-                <div class="postimg"><img src="{{ secure_asset('img/'. $rev->name .'.jpg' ) }}" alt="画像"></div>
+                <div class="postimg"><img src="{{ secure_asset('img/'. $rev->name .'.jpg' ) }}" alt="{{ $rev->name }}"></div>
                 <div>
                     <h3>{{ $rev->name }}</h3>
                     <!--<select name="name">-->

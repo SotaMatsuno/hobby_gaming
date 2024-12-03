@@ -49,9 +49,25 @@ class GamesController extends Controller
     {
         // News Modelからデータを取得する
         $rev = MarioReview::find($request->id);
-        if (empty($rev)) {
-            abort(404);
-        }
+        // if (empty($rev)) {
+        //     abort(404);
+        // }
         return view('admin.gamingposts.edit', ['rev' => $rev]);
+    }
+    
+    public function update(Request $request)
+    {
+        // Validationをかける
+        $this->validate($request, MarioReview::$rules);
+        // News Modelからデータを取得する
+        $rev = MarioReview::find($request->id);
+        // 送信されてきたフォームデータを格納する
+        $rev = $request->all();
+        unset($rev['_token']);
+
+        // 該当するデータを上書きして保存する
+        $rev->fill($rev)->save();
+
+        return redirect('posts');
     }
 }
