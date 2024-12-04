@@ -423,6 +423,12 @@ h3 {
 .bg-02-settings .review-input .review-gamename {
   margin-bottom: 25px;
 }
+.bg-02-settings .review-input .review-gamename .postimg {
+  width: 50%;
+}
+.bg-02-settings .review-input .review-gamename .postimg img {
+  width: 100%;
+}
 .bg-02-settings .review-input .review-gamename div {
   padding: 40px;
   font-size: 15px;

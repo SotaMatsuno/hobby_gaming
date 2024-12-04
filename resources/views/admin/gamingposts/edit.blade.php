@@ -2,7 +2,7 @@
 @extends('layouts.front')
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
-@section('title', '新規作成')
+@section('title', 'レビュー編集')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')

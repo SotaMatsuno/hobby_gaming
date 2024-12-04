@@ -47,11 +47,11 @@ class GamesController extends Controller
     
     public function edit(Request $request)
     {
-        // News Modelからデータを取得する
+        //Modelからデータを取得する
         $rev = MarioReview::find($request->id);
-        // if (empty($rev)) {
-        //     abort(404);
-        // }
+        if (empty($rev)) {
+            abort(404);
+        }
         return view('admin.gamingposts.edit', ['rev' => $rev]);
     }
     
