@@ -25,15 +25,17 @@
                             @endfor
                         </div>
                     </div>
-                    <h3>{{ $rev->title }}</h3>
+                    <h3>{{ Str::limit($rev->title, 20) }}</h3>
                     <div class="post-text">
-                        <p class="post-text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10">{{ $rev->body }}</p>
+                        <p class="post-text-area" placeholder="本文" name="movie_review" id="movie_review_body" cols="40" rows="10">{{ Str::limit($rev->body, 40) }}</p>
                     </div>
-                    <div>
-                        <p>{{$rev->user->name}}</p>
-                        <p>{{ $rev->created_at->format('Y-m-d'); }}</p>
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <p>{{$rev->user->name}}</p>
+                            <p>{{ $rev->created_at->format('Y-m-d'); }}</p>
+                        </div>
+                        <a href="{{ route('admin.gamingposts.edit', ['id' => $rev->id]) }}" class="mario-nav-posts-create">編集する</a>
                     </div>
-                    <a href="{{ route('admin.gamingposts.edit', ['id' => $rev->id]) }}" class="mario-nav-posts-create">編集する</a>
                 </div>
             </div>
         @endforeach

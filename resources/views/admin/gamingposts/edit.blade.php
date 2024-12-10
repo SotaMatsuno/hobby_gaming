@@ -7,7 +7,7 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 <div class="bg-02-settings">
-    <h1>編集</h1>
+    <h1>レビュー編集</h1>
     <form action="{{ route('admin.gamingposts.update') }}" method="post" enctype="multipart/form-data">
         @if (count($errors) > 0)
             <ul>

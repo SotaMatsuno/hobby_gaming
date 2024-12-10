@@ -45,6 +45,19 @@ class GamesController extends Controller
         abort(404);
     }
     
+    public function index(Request $request)
+    {
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            // 検索されたら検索結果を取得する
+            $posts = MarioReviews::where('title', $cond_title)->get();
+        } else {
+            // それ以外はすべてのニュースを取得する
+            $posts = MarioReviews::all();
+        }
+        return view('admin.gamingposts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    }
+    
     public function edit(Request $request)
     {
         //Modelからデータを取得する
@@ -57,16 +70,17 @@ class GamesController extends Controller
     
     public function update(Request $request)
     {
-        // Validationをかける
+        // Validationを行う
         $this->validate($request, MarioReview::$rules);
-        // News Modelからデータを取得する
-        $rev = MarioReview::find($request->id);
-        // 送信されてきたフォームデータを格納する
-        $rev = $request->all();
-        unset($rev['_token']);
+        $review = new MarioReview;
+        $review->user_id = Auth::id();
+        $form = $request->all();
+
+        unset($form['_token']);
 
         // 該当するデータを上書きして保存する
-        $rev->fill($rev)->save();
+        $review->fill($form);
+        $review->save();
 
         return redirect('posts');
     }

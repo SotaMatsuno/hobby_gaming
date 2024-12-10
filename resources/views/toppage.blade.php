@@ -43,7 +43,6 @@
                 </div>
             @endfor
         </div>
-        <p class="mario-nav-posts-create"><a href="{{ url('/admin/gamingposts/create') }}">投稿作成へ</a></p>
     </div>
     <div class="bg-02">
         <h2 class="letter">ゲーム一覧</h2>
