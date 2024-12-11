@@ -44,16 +44,26 @@
             <div class="d-flex align-items-center">
                 <p>評価</p>
                 <div class="review-score-area">
-                    <input class="rating__input hidden--visually" type="radio" id="5-star" name="rating" value="5" required />
-                    <label class="rating__label" for="5-star" title="星5つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星5つ</span></label>
-                    <input class="rating__input hidden--visually" type="radio" id="4-star" name="rating" value="4" />
-                    <label class="rating__label" for="4-star" title="星4つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星4つ</span></label>
-                    <input class="rating__input hidden--visually" type="radio" id="3-star" name="rating" value="3" />
-                    <label class="rating__label" for="3-star" title="星3つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星3つ</span></label>
-                    <input class="rating__input hidden--visually" type="radio" id="2-star" name="rating" value="2" />
-                    <label class="rating__label" for="2-star" title="星2つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span></label>
-                    <input class="rating__input hidden--visually" type="radio" id="1-star" name="rating" value="1" />
-                    <label class="rating__label" for="1-star" title="星1つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星1つ</span></label>
+                    <div class="review-score-area">
+                        <input class="rating__input hidden--visually" type="radio" id="5-star" name="rating" value="5" required  {{$rev->rating == 5 ? "checked":}}/>
+                        <label class="rating__label" for="5-star" title="星5つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星5つ</span></label>
+                        <input class="rating__input hidden--visually" type="radio" id="4-star" name="rating" value="4" />
+                        <label class="rating__label" for="4-star" title="星4つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星4つ</span></label>
+                        <input class="rating__input hidden--visually" type="radio" id="3-star" name="rating" value="3" />
+                        <label class="rating__label" for="3-star" title="星3つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星3つ</span></label>
+                        <input class="rating__input hidden--visually" type="radio" id="2-star" name="rating" value="2" />
+                        <label class="rating__label" for="2-star" title="星2つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星2つ</span></label>
+                        <input class="rating__input hidden--visually" type="radio" id="1-star" name="rating" value="1" />
+                        <label class="rating__label" for="1-star" title="星1つ"><span class="rating__icon" aria-hidden="true"></span><span class="hidden--visually">星1つ</span></label>
+                    </div>
+                    <div class="d-flex">
+                        @for($a = 0; $a < $rev->rating; $a++)
+                                <div><img src="{{ secure_asset('img/icon-mariostar.png') }}"></div>
+                        @endfor
+                        @for($i = 0; $i < 5 - $rev->rating; $i++)
+                            <div><img src="{{ secure_asset('img/icon-gstar.png') }}"></div>
+                        @endfor
+                    </div>
                 </div>
             </div>
             <div class="review-title">
@@ -65,7 +75,7 @@
             <input type="hidden" value="{{ $rev->name }}" name="name">
             @csrf
             <div class="review-btn-box">
-                <input type="submit" value="投稿" class="review-btn">
+                <input type="submit" value="更新" class="review-btn">
             </div>
         </div>
     </form>
